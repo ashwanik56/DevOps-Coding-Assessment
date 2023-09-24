@@ -1,0 +1,11 @@
+<!-- app/views/chat/chat_history.html.erb -->
+
+<h1>Chat History</h1>
+<div class="chat-messages">
+  <% @chat_messages.each do |message| %>
+    <div class="message">
+      <strong><%= message.user.email %>:</strong>
+      <%= message.content %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<%= form_with(url: sessions_path, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit 'Log in' %>
+    </div>
+  <% end %>
+  <% if logged_in? %>
+  <!-- Display content for logged-in users -->
+  <%= link_to 'Log out', logout_path, method: :delete %>
+<% else %>
+  <!-- Display content for non-logged-in users -->
+  <%= link_to 'Log in', login_path %>
+<% end %>
+  

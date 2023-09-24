@@ -1,0 +1,11 @@
+<!-- app/views/chat/send_message.html.erb -->
+
+<h1>Send a Message</h1>
+<%= form_with url: send_message_path, method: :post, local: true do |form| %>
+  <div class="field">
+    <%= form.text_area :message, placeholder: 'Type your message', rows: 3 %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Send', class: 'btn btn-primary' %>
+  </div>
+<% end %>

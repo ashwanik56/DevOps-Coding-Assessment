@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <!-- Include your CSS and JavaScript files here -->
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <style>
+  /* Define basic styling for the chat interface */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.chat-messages {
+  padding: 10px;
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.chat-input {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+message-form {
+  display: flex;
+}
+
+message-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h1>Chat App</h1>
+      <!-- Add user information, sign-out button, etc. here -->
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <!-- Messages will be displayed here -->
+    </div>
+    <div class="chat-input">
+      <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
